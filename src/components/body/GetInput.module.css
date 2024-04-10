@@ -3,7 +3,7 @@
     height: 120px;
     display: flex;
     flex-direction: column;
-    margin-left: 48px;
+    margin-left: 56px;
 }
 
 .container .SectionTitle{
@@ -31,8 +31,11 @@
     font-weight: 600;
 }
 
-.optionsSection input{
+.inputSection textarea{
     margin-right: 8px;
+    resize: vertical;
+    width: 75%;
+
 }
 
 .addElementButton{
@@ -47,3 +50,11 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.optionsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 8px;
+}
+

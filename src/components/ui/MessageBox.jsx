@@ -10,12 +10,12 @@ function MessageBox() {
  
   return (
     <div className={styles.container}>
-      <Handle type="target" position={Position.Top} />
       <div className={styles.labelSection}>Send Message</div>
       <div className={styles.inputSection}>
         <input id="text" name="text" onChange={onChange} className="nodrag" placeholder='Enter Message' autoComplete='off'/>
       </div>
-      <Handle type="source" position={Position.Bottom} id="a" />
+      <Handle type="source" position={Position.Right} id='a'/>
+      <Handle type="target" position={Position.Left} id='a'/>
     </div>
   );
 }
