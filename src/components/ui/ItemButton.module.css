@@ -1,0 +1,24 @@
+.itemButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    border: 2px solid #3a3ab7;
+    font-weight: 600;
+    color: #3a3ab7;
+    margin-top: 20px;
+}
+
+.itemButton i{
+    font-size: 18px;
+}
+
+.itemButton:hover{
+    background-color: #3a3ab7;
+    color: #fff;
+    border: 2px solid #fff;
+}
