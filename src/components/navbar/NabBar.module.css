@@ -1,0 +1,33 @@
+.container{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.leftSide{
+    margin-left: 80px;
+    font-weight: 600
+}
+
+.rightSide{
+    margin-right: 80px;
+}
+
+.rightSide button{
+    padding: 8px 12px;
+    background: none;
+    border: 2px solid #3a3ab7;
+    color: #3a3ab7;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.rightSide button:hover{
+    color: #fff;
+    background-color: #3a3ab7;
+}
