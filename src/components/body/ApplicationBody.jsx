@@ -4,29 +4,28 @@ import MessageSection from "./MessageSection";
 import GetInput from "./GetInput"
 import { useState } from "react";
 import ItemButton from "../ui/ItemButton";
-import TestComponent from "./TestComponent";
 
 const ApplicationBody = () => {
 
     const [isAddMessageSectionOpen, setIsAddMessageSectionOpen] = useState(false)
 
     const [initialNodes, setInitialNodes] = useState([
-        { id: "2", type: 'textUpdater', position: { x: 0, y: 0 }, data: { value: 123 } },
-        { id: "4", type: 'textUpdater', position: { x: 100, y: 100 }, data: { value: 123 } }
+        { id: "1", type: 'textUpdater', position: { x: 0, y: 0 }, data: { value: "saran", isReadOnly: true } },
+        { id: "2", type: 'textUpdater', position: { x: 100, y: 100 }, data: { value: "kings never die", isReadOnly: false } },
     ])
 
     let [currentNodeId, setCurrentNodeId] = useState(3)
-    const currentPostion = {x: 200, y: 200}
+    let [currentPosition, setCurrentPostion] = useState({x: 150, y: 150})
 
     const handleItemButtonPressed = () => {
         setIsAddMessageSectionOpen(!isAddMessageSectionOpen)
     }
 
     const addNewItem = (props) => {
-        const newNode = {id: currentNodeId.toString(), type: 'textUpdater',position: currentPostion, data: {value: 123}}
+        const newNode = {id: currentNodeId.toString(), type: 'textUpdater',position: currentPosition, data: {value: props.value, isReadOnly: props.isReadOnly}}
         setInitialNodes(e => [...e, newNode])
-        console.log(currentNodeId)
         setCurrentNodeId(currentNodeId += 1)
+        setCurrentPostion({x: currentPosition.x += 100, y: currentPosition.y += 100})
     }
 
     return(

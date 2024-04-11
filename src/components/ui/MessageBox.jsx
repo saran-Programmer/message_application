@@ -1,21 +1,27 @@
-import { useCallback } from 'react';
+import { useState } from 'react';
 import { Handle, Position } from 'reactflow';
 
 import styles from "./MessageBox.module.css"
 
-function MessageBox() {
-  const onChange = useCallback((evt) => {
-    console.log(evt.target.value);
-  }, []);
- 
+function MessageBox({data}) {
+
+  const [currentValue, setCurrentValue] = useState(data.value);
+
+  const handleValueChange = (e) => {
+    setCurrentValue(e.target.value)
+  }
+
+
   return (
     <div className={styles.container}>
-      <div className={styles.labelSection}>Send Message</div>
-      <div className={styles.inputSection}>
-        <input id="text" name="text" onChange={onChange} className="nodrag" placeholder='Enter Message' autoComplete='off'/>
+      {(data.isReadOnly === true) ? <div className={styles.labelSectionReadOnly}>Send Message (Read Only)</div> : <div className={styles.labelSection}>Send Message</div>}
+      <div className={styles.inputSection}>  
+      {
+        (data.isReadOnly === true) ? <input id="text" name="text" className="nodrag" autoComplete='off' readOnly value={data.value} /> : <input id="text" name="text" className="nodrag" onChange={handleValueChange} value={currentValue} placeholder='Enter Message' autoComplete='off'/>
+      }
       </div>
       <Handle type="source" position={Position.Right} id='a'/>
-      <Handle type="target" position={Position.Left} id='a'/>
+      <Handle type="target" position={Position.Left} id='b'/>
     </div>
   );
 }

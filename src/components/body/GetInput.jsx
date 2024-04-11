@@ -8,7 +8,7 @@ const GetInput = ({onItemButtonPress, addItem}) => {
 
     const handleAddElementButtonPressed = () => {
         onItemButtonPress()
-        addItem({message: enteredInput, isReadOnly: isReadOnly})
+        addItem({value: enteredInput, isReadOnly: isReadOnly})
     }
 
     const handleReadOnlyStateChange = () => {

@@ -1,6 +1,6 @@
 .container{
     width: 260px;
-    height: 65px;
+    height: 68px;
     border: 1px solid grey;
     border-radius: 8px;
     background-color: #fff;
@@ -13,7 +13,22 @@
     font-size: 14px;
     font-weight: 700;
     padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.container .labelSectionReadOnly{
+    background-color: #f56363;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .container .inputSection input{
     width: 90%;
@@ -29,4 +44,12 @@
 
 .container .inputSection input:active{
     background-color: #fff;
+}
+
+.resizeButton{
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 2px 4px;
+    border-radius: 50%;
+    cursor: pointer;
 }
