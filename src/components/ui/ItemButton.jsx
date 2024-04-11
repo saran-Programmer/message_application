@@ -1,5 +1,6 @@
 import styles from "./ItemButton.module.css"
 
+// Button dispalyed in the buttonsTab
 const ItemButton = ({onItemButtonPress}) => {
 
     const handleButtonPress = () => {

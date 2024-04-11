@@ -3,6 +3,7 @@ import { Handle, Position } from 'reactflow';
 
 import styles from "./MessageBox.module.css"
 
+// The messageNode has two property readOnly and editable
 function MessageBox({data}) {
 
   const [currentValue, setCurrentValue] = useState(data.value);

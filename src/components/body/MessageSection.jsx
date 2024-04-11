@@ -10,26 +10,33 @@ const MessageSection = ({initialNodes}) => {
     const [nodes, setNodes] = useState(initialNodes);
     const [edges, setEdges] = useState([]);
 
+    //updates node list with ever initialNode changes
     useEffect(() => {
       setNodes(initialNodes);
     }, [initialNodes]);
 
+    // To check if the file saveable or not if a node remains unconnected with any node then the value of isSavAble will be false or else it will be true
     useEffect(() => {
       isSavaAble = nodes.length === edges.length+1
     }, [nodes, edges])
 
-    const onNodesChange = useCallback(
-      (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
-      [setNodes]
-    );
-    const onEdgesChange = useCallback(
-      (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-      [setEdges]
-    );
-    const onConnect = useCallback(
-      (connection) => setEdges((eds) => addEdge(connection, eds)),
-      [setEdges]
-    );
+// Callback function to handle changes to nodes
+const onNodesChange = useCallback(
+  (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
+  [setNodes]
+);
+
+// Callback function to handle changes to edges
+const onEdgesChange = useCallback(
+  (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+  [setEdges]
+);
+
+// Callback function to handle node connections
+const onConnect = useCallback(
+  (connection) => setEdges((eds) => addEdge(connection, eds)),
+  [setEdges]
+);
     return(
         <div style={{height: "100vh"}}>
           <ReactFlow

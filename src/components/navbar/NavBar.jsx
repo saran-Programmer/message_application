@@ -4,7 +4,6 @@ import { useState } from "react"
 
 const NavBar = () => {
 
-    const [displayDetialsLabel, setDisplayDetailsLabel] = useState(false)
     const [labelStyle, setLabelStyle] = useState(styles.detailsLabelOff)
     const [labelContent, setLabelContent] = useState("")
 
@@ -17,13 +16,11 @@ const NavBar = () => {
             setLabelContent("Cannot Save Changes")
             setLabelStyle(styles.detailsLabelError)
         }
-        setInterval(() => {
+        setTimeout(() => {
             setLabelContent("")
             setLabelStyle(styles.detailsLabelOff)
-        }, 2500)
-        setDisplayDetailsLabel(true)
+        }, 5000)
     }
-
 
     return(
     <nav className={styles.container}>
@@ -36,7 +33,5 @@ const NavBar = () => {
     )
 }
 
-{/* <div className={styles.detailsLabel}>Saved Changes</div>
-<div className={styles.detailsLabelError}>Cannot Save Changes</div> */}
 
 export default NavBar
