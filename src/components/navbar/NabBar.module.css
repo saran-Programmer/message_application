@@ -1,5 +1,5 @@
 .container{
-    height: 80px;
+    height: 90px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -30,4 +30,28 @@
 .rightSide button:hover{
     color: #fff;
     background-color: #3a3ab7;
+}
+
+.detailsLabelError{
+    padding: 14px 20px;
+    background-color: #fbcbcb;
+    border: 2px solid #ff8383;
+    color: #000;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.detailsLabel{
+    padding: 14px 20px;
+    background-color: #cbebfb;
+    border: 2px solid #5ac8ff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.detailsLabelOff{
+    display: none;
 }

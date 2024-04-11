@@ -11,7 +11,6 @@ function MessageBox({data}) {
     setCurrentValue(e.target.value)
   }
 
-
   return (
     <div className={styles.container}>
       {(data.isReadOnly === true) ? <div className={styles.labelSectionReadOnly}>Send Message (Read Only)</div> : <div className={styles.labelSection}>Send Message</div>}

@@ -4,6 +4,7 @@ import { useCallback, useState, useEffect } from 'react';
 import 'reactflow/dist/style.css';
 
 const nodeTypes = { textUpdater: MessageBox };
+let isSavaAble = false
 
 const MessageSection = ({initialNodes}) => {
     const [nodes, setNodes] = useState(initialNodes);
@@ -11,7 +12,11 @@ const MessageSection = ({initialNodes}) => {
 
     useEffect(() => {
       setNodes(initialNodes);
-  }, [initialNodes]);
+    }, [initialNodes]);
+
+    useEffect(() => {
+      isSavaAble = nodes.length === edges.length+1
+    }, [nodes, edges])
 
     const onNodesChange = useCallback(
       (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
@@ -25,7 +30,6 @@ const MessageSection = ({initialNodes}) => {
       (connection) => setEdges((eds) => addEdge(connection, eds)),
       [setEdges]
     );
-    
     return(
         <div style={{height: "100vh"}}>
           <ReactFlow
@@ -44,6 +48,5 @@ const MessageSection = ({initialNodes}) => {
     )
 }
 
-export default MessageSection
-
-
+export default MessageSection;
+export {isSavaAble}
