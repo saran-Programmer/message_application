@@ -1,0 +1,24 @@
+.container{
+    margin-top: 10px;
+    width: 80%;
+}
+
+.getInput input{
+    width: 90%;
+    padding: 4px 8px;
+    border: 2px solid #313131;
+    border-radius: 8px;
+}
+
+.addElementsButton{
+    width: 102%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #3a3ab7;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}

@@ -1,9 +1,10 @@
 import ReactFlow, { addEdge, applyEdgeChanges, applyNodeChanges, Background, Controls, Position } from 'reactflow';
 import MessageBox from '../ui/MessageBox';
+import DateBox from '../ui/DateBox';
 import { useCallback, useState, useEffect } from 'react';
 import 'reactflow/dist/style.css';
 
-const nodeTypes = { textUpdater: MessageBox };
+const nodeTypes = { textUpdater: MessageBox, dateInput: DateBox };
 let isSavaAble = false
 
 const MessageSection = ({initialNodes}) => {

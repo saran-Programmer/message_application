@@ -7,6 +7,7 @@
 .rightSection{
     height: 100vh;
     width: 85%;
+    overflow-y: hidden;
 }
 
 .leftSection{
@@ -17,6 +18,8 @@
     flex-direction: column;
     padding-top: 20px;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .itemButton{

@@ -21,7 +21,6 @@ const NavBar = () => {
             setLabelStyle(styles.detailsLabelOff)
         }, 5000)
     }
-
     return(
     <nav className={styles.container}>
         <div className={styles.leftSide}>Text Flow App</div>
@@ -32,6 +31,5 @@ const NavBar = () => {
     </nav>
     )
 }
-
 
 export default NavBar

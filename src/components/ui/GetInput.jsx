@@ -8,7 +8,7 @@ const GetInput = ({onItemButtonPress, addItem}) => {
 
     const handleAddElementButtonPressed = () => {
         onItemButtonPress()
-        addItem({value: enteredInput, isReadOnly: isReadOnly})
+        addItem({value: enteredInput, isReadOnly: isReadOnly, type: "messageBox"})
     }
 
     const handleReadOnlyStateChange = () => {
@@ -25,7 +25,7 @@ const GetInput = ({onItemButtonPress, addItem}) => {
             <span className={styles.inputSection}>
                 <textarea value={enteredInput} onChange={handleInputChange}/>
                 <div className={styles.optionsSection}>
-                    <div>
+                    <div className={styles.options}>
                         <input type="checkbox" id="isReadOnly" onClick={handleReadOnlyStateChange}/>
                         <label for="readonly">Read Only</label>
                     </div>

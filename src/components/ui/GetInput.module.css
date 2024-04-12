@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 56px;
+    margin-bottom: 10px;
 }
 
 .container .SectionTitle{
@@ -26,9 +27,21 @@
     align-items: center;
 }
 
+.options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.optionsSection input{
+    height: 16px;
+    width: 16px;
+}
+
 .optionsSection label{
     font-size: 14px;
     font-weight: 600;
+    margin-left: 18px;
 }
 
 .inputSection textarea{
@@ -39,7 +52,6 @@
 }
 
 .addElementButton{
-    margin-top: 16px;
     width: 78%;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -49,6 +61,7 @@
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 4px;
 }
 
 .optionsSection{
