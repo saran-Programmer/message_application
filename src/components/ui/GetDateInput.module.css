@@ -22,3 +22,16 @@
     cursor: pointer;
     margin-top: 10px;
 }
+
+.cancelButton{
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #d92e2e;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 4px;
+}

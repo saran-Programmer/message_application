@@ -1,7 +1,7 @@
 import styles from "./GetInput.module.css"
 import { useState } from "react"
 
-const GetInput = ({onItemButtonPress, addItem}) => {
+const GetInput = ({onItemButtonPress, addItem, onCancel}) => {
 
     const [enteredInput, setEnteredInput] = useState("")
     const [isReadOnly, setIsReadOnly] = useState(false)
@@ -19,6 +19,10 @@ const GetInput = ({onItemButtonPress, addItem}) => {
         setEnteredInput(e.target.value)
     }
 
+    const handleCancelButtonClick = () => {
+        onCancel()
+    }
+
     return(
         <div className={styles.container}>
             <span className={styles.SectionTitle}>Text</span>
@@ -31,6 +35,7 @@ const GetInput = ({onItemButtonPress, addItem}) => {
                     </div>
                 </div>
                 <button className={styles.addElementButton} onClick={handleAddElementButtonPressed}>Add Element</button>
+                <button className={styles.cancelButton} onClick={handleCancelButtonClick}>cancel</button>
             </span>
         </div>
     )
